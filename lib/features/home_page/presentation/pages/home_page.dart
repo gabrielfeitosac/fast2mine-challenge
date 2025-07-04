@@ -1,4 +1,6 @@
+import 'package:fast2mine_challenge/core/config/instances.dart';
 import 'package:fast2mine_challenge/core/utils/colors.dart';
+import 'package:fast2mine_challenge/features/home_page/presentation/controllers/home_controller.dart';
 import 'package:fast2mine_challenge/features/home_page/presentation/widgets/button_widget.dart';
 import 'package:fast2mine_challenge/features/home_page/presentation/widgets/home_container.dart';
 import 'package:fast2mine_challenge/features/home_page/presentation/widgets/status_container.dart';
@@ -14,6 +16,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late final HomeController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = HomeController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
