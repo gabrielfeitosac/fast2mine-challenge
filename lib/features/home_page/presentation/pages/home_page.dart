@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: buttonColor,
                 icon: Icons.play_arrow_rounded,
                 textColor: primaryColor,
-                onPressed: controller.simulate,
+                onPressed: () => controller.simulate(context),
               ),
               VerticalSpacing(1),
               ButtonWidget(
