@@ -1,4 +1,5 @@
 import 'package:fast2mine_challenge/core/utils/colors.dart';
+import 'package:fast2mine_challenge/core/utils/device_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeContainer extends StatelessWidget {
@@ -16,8 +17,8 @@ class HomeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 10),
-      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+      margin: EdgeInsets.only(bottom: 1.h),
+      padding: EdgeInsets.symmetric(vertical: 1.5.h, horizontal: 2.5.w),
       width: double.infinity,
       decoration: BoxDecoration(
         color: containerColor,
@@ -34,7 +35,7 @@ class HomeContainer extends StatelessWidget {
               color: fontColor,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 0.75.h),
           if (itemText != null)
             Container(
               padding: EdgeInsets.all(5),
@@ -45,9 +46,10 @@ class HomeContainer extends StatelessWidget {
               child: Text(
                 itemText!,
                 style: TextStyle(
-                    color: primaryColor,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 18),
+                  color: primaryColor,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                ),
               ),
             ),
           if (containerWidget != null) containerWidget!

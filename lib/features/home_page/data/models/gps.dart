@@ -8,6 +8,8 @@ class GPS {
   final double velocidade;
   final Coordenadas localizacao;
 
+  double get velocidadeConvertida => velocidade * 3.6;
+
   GPS(
     this.velocidade,
     this.localizacao,

@@ -9,7 +9,7 @@ class DeviceScreen {
   factory DeviceScreen() => deviceScreen;
   DeviceScreen._internal();
 
-  static void setAppMeasurements(BuildContext context) {
+  static void setDeviceScreen(BuildContext context) {
     deviceScreen = DeviceScreen._internal()
       ..mobile = MediaQuery.of(context).size.width < 600
       ..screenH = MediaQuery.of(context).size.height
