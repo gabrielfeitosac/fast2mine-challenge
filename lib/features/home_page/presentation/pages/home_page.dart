@@ -66,7 +66,8 @@ class _HomePageState extends State<HomePage> {
                 () => HomeContainer(
                   title: 'STATUS DE SINCRONIZAÇÃO',
                   containerWidget: SyncStatus(
-                    unsynchronizedQuantity: controller.completeCycles.length,
+                    unsynchronizedQuantity:
+                        controller.unsynchronizedCicles.length,
                   ),
                 ),
               ),

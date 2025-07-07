@@ -66,4 +66,15 @@ class Ciclo {
       status_sincronizacao TEXT NOT NULL
     )
     ''';
+
+  Map<String, dynamic> cicloToJsonSync() => <String, dynamic>{
+        'ciclo_id': cicloId,
+        'data_inicio': dataInicio.toIso8601String(),
+        'data_fim': dataFim.toIso8601String(),
+        'etapas': etapas.map((e) => e.toJson()).toList(),
+        'equipamento_id': equipamentoId,
+        'equipamento_carga': equipamentoCarga,
+        'ponto_basculamento': pontoBasculamento.toJson(),
+        'status_sincronizacao': statusSincronizacao,
+      };
 }
