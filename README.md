@@ -2,7 +2,7 @@
 
 ### 1. Baixar o APK
 
-👉 [Clique aqui para baixar o APK]()
+👉 [Clique aqui para baixar o APK](https://drive.google.com/drive/folders/1bRJv8ULnhuA4ipXgMyQsnbOYu9P0fxIq)
 
 ### 2. Instalar
 - Ative a permissão de "Fontes desconhecidas" no dispositivo.
