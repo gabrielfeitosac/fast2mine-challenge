@@ -36,11 +36,3 @@ O arquivo gerado com os dados sincronizados é:
 - **Localização no dispositivo: /storage/emulated/0/Download/sync_servidor.jsonl (Pasta Downloads)**
 
 > Para acessar o arquivo, utilize ferramentas como o Android Studio ou o próprio gerenciador de arquivos do dispositivo.
-
-
-## ❓ Dúvidas Técnicas
-
-- Era necessário validação automática de múltiplos ciclos em sequência? (Repetir o processo)
-- Necessária importação dinâmica de arquivos `.jsonl` pelo usuário? (FilePicker)
-- O caminhão precisa estar parado por 5 segundos pra estar na etapa `EM FILA CARREGAMENTO`, porém na primeira leitura eu ainda não tenho uma data anterior para comparar o tempo, qual etapa deveria ser considerada?
-- O app deveria manter a etapa atual ao ser fechado?
