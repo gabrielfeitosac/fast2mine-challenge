@@ -14,10 +14,10 @@
 ## ⚙️ How to Use
 
 1. Open the app.
-2. Click the **"SIMULATE NEXT READING"** button to perform a simulated data reading.
+2. Click the **" SIMULAR PROXIMA LEITURA (SIMULATE NEXT READING)"** button to perform a simulated data reading.
 3. Watch the interface update in real time.
 4. When a cycle is completed, it will be saved locally.
-5. Click **"SYNC DATA"** to export the synchronization simulation JSON.
+5. Click **"SINCRONIZAR DADOS (SYNC DATA)"** to export the synchronization simulation JSON.
 
 ---
 
