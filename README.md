@@ -1,45 +1,51 @@
-## 📲 Instalação
+## 📲 Installation
 
-### 1. Baixar o APK
+### 1. Download the APK
 
-👉 [Clique aqui para baixar o APK](https://drive.google.com/drive/folders/1bRJv8ULnhuA4ipXgMyQsnbOYu9P0fxIq)
+👉 [Click here to download the APK](https://drive.google.com/drive/folders/1bRJv8ULnhuA4ipXgMyQsnbOYu9P0fxIq)
 
-### 2. Instalar
-- Ative a permissão de "Fontes desconhecidas" no dispositivo.
-- Instale o APK e abra o app normalmente.
+### 2. Install
 
+- Enable the **"Unknown Sources"** permission on your device.
+- Install the APK and open the app normally.
 
-## ⚙️ Como usar
+---
 
-1. Abra o aplicativo.
-2. Clique no botão **"SIMULAR PROXIMA LEITURA**" para realizar uma leitura de dados simulados
-3. Acompanhe a interface ser atualizada em tempo real
-4. Ao completar um ciclo, ele será salvo localmente
-5. Cliquem em **"SINCRONIZAR DADOS**" para exporta o JSON de simulação do sincronismo
+## ⚙️ How to Use
 
+1. Open the app.
+2. Click the **"SIMULATE NEXT READING"** button to perform a simulated data reading.
+3. Watch the interface update in real time.
+4. When a cycle is completed, it will be saved locally.
+5. Click **"SYNC DATA"** to export the synchronization simulation JSON.
 
-## 🧠 Arquitetura e Decisões Técnicas
+---
 
-- SQFlite para permanência de dados localmente
-- Implementação de arquitetura limpa, utilizando DataSources, Repositorys, Usecases.
-- Organização de pastas da arquitetura limpa Features, Data, Domain, Presentation.
-- Utilização do pacote GetIt para controle de instâncias Singleton
-- Utilização dos pacotes JsonSerializable e JsonAnnotation para auxílio da criação das models.
-- Preferência por salvar GPS e Etapas como JSON no banco local, utilizando conversores JSON.
+## 🧠 Architecture & Technical Decisions
 
+- **SQFlite** used for local data persistence.
+- Clean Architecture implemented using **DataSources**, **Repositories**, and **UseCases**.
+- Folder structure organized according to Clean Architecture: **Features**, **Data**, **Domain**, **Presentation**.
+- **GetIt** package used for managing Singleton instances.
+- **JsonSerializable** and **JsonAnnotation** packages used to help generate model classes.
+- GPS and Step data are stored as JSON in the local database using custom JSON converters.
 
-## 💾 Local de Armazenamento
+---
 
-O arquivo gerado com os dados sincronizados é:
+## 💾 Storage Location
+
+The file generated with the synchronized data is:
 
 - **📁 sync_servidor.jsonl**
-- **Localização no dispositivo: /storage/emulated/0/Download/sync_servidor.jsonl (Pasta Downloads)**
+- **Device path:** `/storage/emulated/0/Download/sync_servidor.jsonl` (Downloads folder)
 
-> Para acessar o arquivo, utilize ferramentas como o Android Studio ou o próprio gerenciador de arquivos do dispositivo.
+> To access the file, use tools like Android Studio or the device's own file manager.
 
+---
 
-## ❓ Dúvidas Técnicas
-- Era necessário validação automática de múltiplos ciclos em sequência? (Repetir o processo)
-- Necessária importação dinâmica de arquivos `.jsonl` pelo usuário? (FilePicker)
-- O caminhão precisa estar parado por 5 segundos pra estar na etapa `EM FILA CARREGAMENTO`, porém na primeira leitura eu ainda não tenho uma data anterior para comparar o tempo, qual etapa deveria ser considerada?
-- O aplicativo deveria manter a etapa atual ao ser fechado?
+## ❓ Technical Questions
+
+- Was automatic validation of multiple sequential cycles required? (Repeat the process)
+- Is dynamic user import of `.jsonl` files needed? (FilePicker)
+- The truck must be stationary for 5 seconds to be in the `IN LOADING QUEUE` step, but on the first reading I don’t have a previous timestamp to compare — which step should be considered?
+- Should the app maintain the current step after being closed?
